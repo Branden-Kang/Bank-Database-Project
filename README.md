@@ -1,4 +1,4 @@
-# Bank-Database-Project (In Progress)
+# Bank-Database-Project
 
 The enterprise is Nickel Savings and Loan, a fictional bank that is approximately half as good as the New York-based Dime Community Bank. For this project, we shall focus only on the financial aspects of the bank, and not details regarding bank employees, physical locations, etc. We shall focus on retail customers who have accounts, loans, debit cards, and credit cards, and not corporate customers. The financial aspects we shall consider are only those that relate directly to customers, not such matters as tax reporting.
 
