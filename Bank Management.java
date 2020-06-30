@@ -133,59 +133,59 @@ public class bank {
 	 	   
 	 	   if(choice1==4)//to transfer fund into different existing account
 	 	   {
-//	 		  System.out.println("enter your bank name");
-//	 		  String bank1=s.next();
-//	 		  System.out.println("enter your account number");
-//	 		  String account1=s.next();
-//	 		  System.out.println("enter the bank in which you want to transfer fund");
-//	 		  String bank2=s.next();
-//	 		  System.out.println("enter the account number in which you want to transfer fund");
-//	 		  String account2=s.next();
-//	 		  //fetch the initial data of the user who is transferring fund
-//	 		  String query1="select amount from "+bank1+" where account_number=?";
-//	 		  PreparedStatement stmt1=con.prepareStatement(query1);
-//	 		  stmt1.setString(1, account1);
-//	 		  ResultSet rs1=stmt1.executeQuery();
-// 			  double initial_amount1=0.0;
-// 			  while(rs1.next())
-// 			  {
-// 				 initial_amount1=rs1.getDouble(1);	
-// 			  }
-// 			  String query2="select amount from "+bank2+" where account_number=?";
-//	 		  PreparedStatement stmt2=con.prepareStatement(query2);
-//	 		  stmt2.setString(1, account2);
-//	 		  ResultSet rs2=stmt2.executeQuery();
-//			  double initial_amount2=0.0;
-//			  while(rs2.next())
-//			  {
-//				 initial_amount2=rs2.getDouble(1);	
-//			  }
-//	 		  System.out.println("enter the amount you want to transfer");
-//	 		  double new_amount=s.nextDouble();
-//	 		  if(initial_amount1 < new_amount)
-//	 		  {
-//	 			  System.out.println("## you do not have sufficient amount");
-//	 			  break;
-//	 		  }
-//	 		  else
-//	 		  {
-//	 			 double amount1=initial_amount1 - new_amount; //amount for transferring user
-//	 			 double amount2=initial_amount2 + new_amount; //amount for receiving user
-//	 			 //to update 1st account
-//	 			 String query3="update "+bank1+" set amount=? where account_number=?";
-//	 			 PreparedStatement stmt3=con.prepareStatement(query3);
-//	 			 stmt3.setDouble(1, amount1);
-//	 			 stmt3.setString(2, account1);
-//	 			 stmt3.executeUpdate();
-//	 			 System.out.println("your account is debited ₹"+new_amount);
-//	 			 System.out.println("your new account balance is ₹"+amount1);
-//	 			 //to update 2nd account
-//	 			 String query4="update "+bank2+" set amount=? where account_number=?";
-//	 			 PreparedStatement stmt4=con.prepareStatement(query4);
-//	 			 stmt4.setDouble(1, amount2);
-//	 			 stmt4.setString(2, account2);
-//	 			 stmt4.executeUpdate();
-//	 		  }
+	 		  System.out.println("enter your bank name");
+	 		  String bank1=s.next();
+	 		  System.out.println("enter your account number");
+	 		  String account1=s.next();
+	 		  System.out.println("enter the bank in which you want to transfer fund");
+	 		  String bank2=s.next();
+	 		  System.out.println("enter the account number in which you want to transfer fund");
+	 		  String account2=s.next();
+	 		  //fetch the initial data of the user who is transferring fund
+	 		  String query1="select amount from "+bank1+" where account_number=?";
+	 		  PreparedStatement stmt1=con.prepareStatement(query1);
+	 		  stmt1.setString(1, account1);
+	 		  ResultSet rs1=stmt1.executeQuery();
+			  double initial_amount1=0.0;
+			  while(rs1.next())
+			  {
+				 initial_amount1=rs1.getDouble(1);	
+			  }
+			  String query2="select amount from "+bank2+" where account_number=?";
+	 		  PreparedStatement stmt2=con.prepareStatement(query2);
+	 		  stmt2.setString(1, account2);
+	 		  ResultSet rs2=stmt2.executeQuery();
+			  double initial_amount2=0.0;
+			  while(rs2.next())
+			  {
+				 initial_amount2=rs2.getDouble(1);	
+			  }
+	 		  System.out.println("enter the amount you want to transfer");
+	 		  double new_amount=s.nextDouble();
+	 		  if(initial_amount1 < new_amount)
+	 		  {
+	 			  System.out.println("## you do not have sufficient amount");
+	 			  break;
+	 		  }
+	 		  else
+	 		  {
+	 			 double amount1=initial_amount1 - new_amount; //amount for transferring user
+	 			 double amount2=initial_amount2 + new_amount; //amount for receiving user
+	 			 //to update 1st account
+	 			 String query3="update "+bank1+" set amount=? where account_number=?";
+	 			 PreparedStatement stmt3=con.prepareStatement(query3);
+	 			 stmt3.setDouble(1, amount1);
+	 			 stmt3.setString(2, account1);
+	 			 stmt3.executeUpdate();
+	 			 System.out.println("your account is debited ₹"+new_amount);
+	 			 System.out.println("your new account balance is ₹"+amount1);
+	 			 //to update 2nd account
+	 			 String query4="update "+bank2+" set amount=? where account_number=?";
+	 			 PreparedStatement stmt4=con.prepareStatement(query4);
+	 			 stmt4.setDouble(1, amount2);
+	 			 stmt4.setString(2, account2);
+	 			 stmt4.executeUpdate();
+	 		  }
 	 		  System.out.println("_________________________");
 	 	   }//end of 4th if
 	 	   
